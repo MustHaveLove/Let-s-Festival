@@ -1,16 +1,16 @@
-import React from "react";
-import { useRouter } from "next/router";
+import React from 'react';
+import { useRouter } from 'next/router';
 import {
   Map,
   MapMarker,
   ZoomControl,
   MapTypeControl,
   CustomOverlayMap,
-} from "react-kakao-maps-sdk";
-import { useState, useEffect } from "react";
-import data from "../utils/data";
+} from 'react-kakao-maps-sdk';
+import { useState, useEffect } from 'react';
+import data from '../utils/data';
 
-export default function searchmap() {
+export default function Searchmap() {
   const [info, setInfo] = useState();
   const [isOpen, setIsOpen] = useState(false);
   const [markers, setMarkers] = useState([]);
@@ -63,8 +63,8 @@ export default function searchmap() {
           lng: 126.9786567,
         }}
         style={{
-          width: "100%",
-          height: "400px",
+          width: '100%',
+          height: '400px',
         }}
         level={2}
         onCreate={setMap}
@@ -84,7 +84,7 @@ export default function searchmap() {
             {info && info.content === marker.content && isOpen && (
               // <div style={{ color: "#000" }}>{marker.content}</div>
               <div
-                style={{ color: "#000" }}
+                style={{ color: '#000' }}
                 className="box-content h-10 w-60  text-center text-lg items-center"
               >
                 {marker.content}

@@ -1,29 +1,29 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
-import { useForm } from 'react-hook-form'
+import Link from 'next/link';
+import Layout from '../components/Layout';
+import { useForm } from 'react-hook-form';
 
-import { signIn, useSession } from 'next-auth/react'
-import { getError } from '../utils/error'
-import { toast } from 'react-toastify'
-import { useEffect } from 'react'
-import { useRouter } from 'next/router'
+import { signIn, useSession } from 'next-auth/react';
+import { getError } from '../utils/error';
+import { toast } from 'react-toastify';
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 export default function SigninScreen() {
   const {
     handleSubmit,
     register,
     formState: { errors },
-  } = useForm()
+  } = useForm();
 
-  const { data: session } = useSession()
-  const router = useRouter()
-  const { redirect } = router.query
+  const { data: session } = useSession();
+  const router = useRouter();
+  const { redirect } = router.query;
 
   useEffect(() => {
     if (session?.user) {
-      router.push(redirect || '/')
+      router.push(redirect || '/');
     }
-  }, [router, session, redirect])
+  }, [router, session, redirect]);
 
   const submitHandler = async ({ email, password }) => {
     try {
@@ -31,88 +31,88 @@ export default function SigninScreen() {
         redirect: false,
         email,
         password,
-      })
-      console.log("Login: " + result.status);
+      });
+      console.log('Login: ' + result.status);
       await axios
-        .post("/api/auth/loginLog", { provider: "credentials" })
+        .post('/api/auth/loginLog', { provider: 'credentials' })
         .then((res) => {
           console.log(res.data.message);
         });
       if ((result, errors)) {
-        toast.error(result.error)
+        toast.error(result.error);
       }
     } catch (err) {
-      toast.error(getError(err))
+      toast.error(getError(err));
     }
-  }
+  };
 
   const githubLoginHandler = async () => {
     try {
       // eslint-disable-next-line no-unused-vars
       const result = await signIn('github', {
         redirect: false,
-      })
-      console.log('Login: ' + result.status)
+      });
+      console.log('Login: ' + result.status);
       await axios
         .post('/api/auth/loginLog', { provider: 'github' })
         .then((res) => {
-          console.log(res.data.message)
-        })
+          console.log(res.data.message);
+        });
     } catch (err) {
-      toast.error(getError(err))
+      toast.error(getError(err));
     }
-  }
+  };
 
   const googleLoginHandler = async () => {
     try {
       // eslint-disable-next-line no-unused-vars
       const result = await signIn('google', {
         redirect: false,
-      })
-      console.log('Login: ' + result.status)
+      });
+      console.log('Login: ' + result.status);
       await axios
         .post('/api/auth/loginLog', { provider: 'google' })
         .then((res) => {
-          console.log(res.data.message)
-        })
+          console.log(res.data.message);
+        });
     } catch (err) {
-      toast.error(getError(err))
+      toast.error(getError(err));
     }
-  }
+  };
 
   const naverLoginHandler = async () => {
     try {
       // eslint-disable-next-line no-unused-vars
       const result = await signIn('naver', {
         redirect: false,
-      })
-      console.log('Login: ' + result.status)
+      });
+      console.log('Login: ' + result.status);
       await axios
         .post('/api/auth/loginLog', { provider: 'naver' })
         .then((res) => {
-          console.log(res.data.message)
-        })
+          console.log(res.data.message);
+        });
     } catch (err) {
-      toast.error(getError(err))
+      toast.error(getError(err));
     }
-  }
+  };
 
   const kakaoLoginHandler = async () => {
     try {
       // eslint-disable-next-line no-unused-vars
       const result = await signIn('kakao', {
         redirect: false,
-      })
-      console.log('Login: ' + result.status)
+      });
+      console.log('Login: ' + result.status);
       await axios
         .post('/api/auth/loginLog', { provider: 'kakao' })
         .then((res) => {
-          console.log(res.data.message)
-        })
+          console.log(res.data.message);
+        });
     } catch (err) {
-      toast.error(getError(err))
+      toast.error(getError(err));
     }
-  }
+  };
 
   return (
     <Layout title="Sign In">
@@ -139,11 +139,11 @@ export default function SigninScreen() {
               <div class="relative">
                 <input
                   type="email"
-                  {...register("email", {
-                    required: "이메일을 입력하세요.",
+                  {...register('email', {
+                    required: '이메일을 입력하세요.',
                     pattern: {
                       value: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/i,
-                      message: "이메일을 형식을 지켜주세요.",
+                      message: '이메일을 형식을 지켜주세요.',
                     },
                   })}
                   className="w-full rounded-lg border-slate-300 p-4 pr-12 text-sm shadow-sml"
@@ -181,11 +181,11 @@ export default function SigninScreen() {
               <div class="relative">
                 <input
                   type="password"
-                  {...register("password", {
-                    required: "비밀번호를 입력하세요.",
+                  {...register('password', {
+                    required: '비밀번호를 입력하세요.',
                     minLength: {
                       value: 3,
-                      message: "비밀번호를 3글자 이상으로 입력하세요.",
+                      message: '비밀번호를 3글자 이상으로 입력하세요.',
                     },
                   })}
                   class="w-full rounded-lg border-slate-300 p-4 pr-12 text-sm shadow-sm"
@@ -367,12 +367,11 @@ export default function SigninScreen() {
               </a> */}
               <p class="text-base inline-block mb-2 text-[#adadad] hover:text-primary">
                 아직 회원이 아니신가요? &nbsp;
-                <a
-                  href="/signup"
-                  class="text-primary text-blue-300 hover:underline"
-                >
-                  회원가입
-                </a>
+                <Link href="/signup">
+                  <a class="text-primary text-blue-300 hover:underline">
+                    회원가입
+                  </a>
+                </Link>
               </p>
             </div>
           </form>
