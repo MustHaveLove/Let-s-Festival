@@ -1,7 +1,7 @@
-import React from 'react'
-import Layout from '../components/Layout'
-import Profile from '../styles/developer.module.css'
-import { BsGithub } from 'react-icons/bs'
+import React from 'react';
+import Layout from '../components/Layout';
+import Profile from '../styles/developer.module.css';
+import { BsGithub } from 'react-icons/bs';
 
 export default function developers() {
   return (
@@ -22,6 +22,7 @@ export default function developers() {
                 <a
                   href="https://github.com/MustHaveLove"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className={Profile.text}
                 >
                   <BsGithub />
@@ -48,6 +49,7 @@ export default function developers() {
                 <a
                   href="https://github.com/JBUkim"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className={Profile.text}
                 >
                   <BsGithub />
@@ -72,6 +74,7 @@ export default function developers() {
                 <a
                   href="https://github.com/withsjb/festivall"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className={Profile.text}
                 >
                   <BsGithub />
@@ -96,6 +99,7 @@ export default function developers() {
                 <a
                   href="https://github.com/JBUpark21"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className={Profile.text}
                 >
                   <BsGithub />
@@ -120,6 +124,7 @@ export default function developers() {
                 <a
                   href="https://github.com/KooSinB"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className={Profile.text}
                 >
                   <BsGithub />
@@ -131,5 +136,5 @@ export default function developers() {
         </button>
       </div>
     </Layout>
-  )
+  );
 }
