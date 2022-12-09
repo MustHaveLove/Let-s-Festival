@@ -9,6 +9,7 @@ import {
 } from 'react-kakao-maps-sdk';
 import { useState, useEffect } from 'react';
 import data from '../utils/data';
+import Layout from '../components/Layout';
 
 export default function Searchmap() {
   const [info, setInfo] = useState();
