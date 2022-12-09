@@ -85,7 +85,6 @@ function App() {
             // eslint-disable-next-line react/jsx-key
             <div className={Styles.imgbox}>
               <a href={item.url}>
-                {' '}
                 <h3>
                   <img
                     key={`${item.id}`}
