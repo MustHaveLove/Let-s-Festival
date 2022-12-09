@@ -247,7 +247,7 @@ export default function SigninScreen() {
                 onClick={githubLoginHandler}
               >
                 <span className="inline-flex sm:ml-auto sm:mt-0 justify-center sm:justify-start">
-                  <a href="https://github.com/JBUpark21">
+                  <a>
                     <svg
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -269,10 +269,7 @@ export default function SigninScreen() {
                 onClick={googleLoginHandler}
               >
                 <span className="inline-flex sm:ml-auto sm:mt-0 justify-center sm:justify-start">
-                  <a
-                    className="text-gray-500"
-                    href="https://github.com/JBUpark21"
-                  >
+                  <a className="text-gray-500">
                     <svg
                       fill="currentColor"
                       strokeLinecap="round"
@@ -310,10 +307,7 @@ export default function SigninScreen() {
                 onClick={naverLoginHandler}
               >
                 <span className="inline-flex sm:ml-auto sm:mt-0 justify-center sm:justify-start">
-                  <a
-                    className="text-green-500"
-                    href="https://github.com/JBUpark21"
-                  >
+                  <a className="text-green-500">
                     <svg
                       role="img"
                       fill="currentColor"
@@ -339,10 +333,7 @@ export default function SigninScreen() {
                 onClick={kakaoLoginHandler}
               >
                 <span className="inline-flex sm:ml-auto sm:mt-0 justify-center sm:justify-start">
-                  <a
-                    className="text-yellow-400"
-                    href="https://github.com/JBUpark21"
-                  >
+                  <a className="text-yellow-400">
                     <svg
                       role="img"
                       fill="currentColor"
