@@ -1,21 +1,21 @@
-import { useState } from "react";
-import Link from "next/link";
-import Layout from "../components/Layout";
+import { useState } from 'react';
+import Link from 'next/link';
+import Layout from '../components/Layout';
 
-export default function post(props) {
+export default function Post(props) {
   const [post, setPost] = useState(props.data);
 
   const getAll = async () => {
-    const res = await fetch("http://localhost:5000/posts");
+    const res = await fetch('http://localhost:5000/posts');
     const data = await res.json();
 
     setPost(data);
   };
 
   const deletePost = async (id) => {
-    console.log("tes");
-    await fetch("http://localhost:5000/posts/" + id, {
-      method: "DELETE",
+    console.log('tes');
+    await fetch('http://localhost:5000/posts/' + id, {
+      method: 'DELETE',
     });
     getAll();
   };
@@ -69,7 +69,7 @@ export default function post(props) {
 }
 
 export async function getServerSideProps(context) {
-  const res = await fetch("http://localhost:5000/posts");
+  const res = await fetch('http://localhost:5000/posts');
   const data = await res.json();
 
   if (!data) {
