@@ -1,4 +1,5 @@
 import Header from '../../../components/CRUD/FormPost';
+import FormPost from '../../../components/CRUD/FormPost';
 
 export default function EditPost(props) {
   return (
