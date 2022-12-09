@@ -87,7 +87,7 @@ function App() {
                 {' '}
                 <h3>
                   <img
-                    key={id}
+                    key={`${item.id}`}
                     className={className}
                     src={item.image}
                     alt="Comic"
