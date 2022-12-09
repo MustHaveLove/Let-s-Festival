@@ -1,12 +1,12 @@
-import Link from "next/link";
-import React, { useEffect } from "react";
-import { signIn, useSession } from "next-auth/react";
-import { useForm } from "react-hook-form";
-import Layout from "../components/Layout";
-import { getError } from "../utils/error";
-import { toast } from "react-toastify";
-import { useRouter } from "next/router";
-import axios from "axios";
+import Link from 'next/link';
+import React, { useEffect } from 'react';
+import { signIn, useSession } from 'next-auth/react';
+import { useForm } from 'react-hook-form';
+import Layout from '../components/Layout';
+import { getError } from '../utils/error';
+import { toast } from 'react-toastify';
+import { useRouter } from 'next/router';
+import axios from 'axios';
 
 export default function RegisterScreen() {
   const { data: session } = useSession();
@@ -16,7 +16,7 @@ export default function RegisterScreen() {
 
   useEffect(() => {
     if (session?.user) {
-      router.push(redirect || "/");
+      router.push(redirect || '/');
     }
   }, [router, session, redirect]);
 
@@ -29,13 +29,13 @@ export default function RegisterScreen() {
 
   const submitHandler = async ({ name, email, password }) => {
     try {
-      await axios.post("/api/auth/signup", {
+      await axios.post('/api/auth/signup', {
         name,
         email,
         password,
       });
 
-      const result = await signIn("credentials", {
+      const result = await signIn('credentials', {
         redirect: false,
         email,
         password,
@@ -59,7 +59,6 @@ export default function RegisterScreen() {
             />
 
             <div class="hidden lg:relative lg:block lg:p-12">
-              
               {/* <a class="block text-white" href="/">
                 <span class="sr-only">Home</span>
                 <svg
@@ -76,7 +75,7 @@ export default function RegisterScreen() {
               </a> */}
 
               <h2 class="mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl">
-                Let's Festival에 어서오세요!
+                Let&#39;s Festival에 어서오세요!
               </h2>
 
               <p class="mt-4 leading-relaxed text-white/90">
@@ -110,8 +109,8 @@ export default function RegisterScreen() {
                     className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                     id="name"
                     autoFocus
-                    {...register("name", {
-                      required: "이름을 입력해주세요.",
+                    {...register('name', {
+                      required: '이름을 입력해주세요.',
                     })}
                   />
                   {errors.name && (
@@ -128,12 +127,12 @@ export default function RegisterScreen() {
                   </label>
                   <input
                     type="email"
-                    {...register("email", {
-                      required: "이메일을 입력해주세요.",
+                    {...register('email', {
+                      required: '이메일을 입력해주세요.',
                       pattern: {
                         value:
                           /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/i,
-                        message: "이메일을 형식을 지켜주세요.",
+                        message: '이메일을 형식을 지켜주세요.',
                       },
                     })}
                     class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
@@ -153,11 +152,11 @@ export default function RegisterScreen() {
                   </label>
                   <input
                     type="password"
-                    {...register("password", {
-                      required: "비밀번호를 입력하세요.",
+                    {...register('password', {
+                      required: '비밀번호를 입력하세요.',
                       minLength: {
                         value: 6,
-                        message: "비밀번호를 5글자 이상 입력하세요.",
+                        message: '비밀번호를 5글자 이상 입력하세요.',
                       },
                     })}
                     class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
@@ -183,12 +182,12 @@ export default function RegisterScreen() {
                     class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                     type="password"
                     id="confirmPassword"
-                    {...register("confirmPassword", {
-                      required: "비밀번호를 한번더 입력해주세요.",
-                      validate: (value) => value === getValues("password"),
+                    {...register('confirmPassword', {
+                      required: '비밀번호를 한번더 입력해주세요.',
+                      validate: (value) => value === getValues('password'),
                       minLength: {
                         value: 3,
-                        message: "비밀번호를 2글자 이상 입력하세요.",
+                        message: '비밀번호를 2글자 이상 입력하세요.',
                       },
                     })}
                   />
@@ -198,7 +197,7 @@ export default function RegisterScreen() {
                     </div>
                   )}
                   {errors.confirmPassword &&
-                    errors.confirmPassword.type === "validate" && (
+                    errors.confirmPassword.type === 'validate' && (
                       <div className="text-red-500 ">
                         비밀번호가 일치하지 않습니다.
                       </div>
@@ -218,7 +217,7 @@ export default function RegisterScreen() {
                   <p class="text-base inline-block mb-2 text-[#adadad] hover:text-primary">
                     이미 계정이 있으신가요? &nbsp;
                     <a
-                      href={`/signin?redirect=${redirect || "/"}`}
+                      href={`/signin?redirect=${redirect || '/'}`}
                       class="text-primary text-blue-300 hover:underline"
                     >
                       로그인

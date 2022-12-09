@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 
@@ -45,13 +46,14 @@ export default function FormPost(props) {
   const handleButton = (action) => {
     if (action == 'add') {
       return (
-        <a
-          className="rounded text-gray-100 mt-96 absolute px-5 py-1 bg-red-500 hover:shadow-inner hover:bg-red-700 transition-all duration-300"
-          onClick={storeData}
-          href="/Boardindex"
-        >
-          올리기
-        </a>
+        <Link href="/Boardindex">
+          <a
+            className="rounded text-gray-100 mt-96 absolute px-5 py-1 bg-red-500 hover:shadow-inner hover:bg-red-700 transition-all duration-300"
+            onClick={storeData}
+          >
+            올리기
+          </a>
+        </Link>
       );
     } else if (action == 'update') {
       return (
