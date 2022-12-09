@@ -1,29 +1,30 @@
-import React, { useState } from "react";
-import Layout from "../../components/Layout";
-import jwt from "jsonwebtoken";
-import axios from "axios";
-import { useSession } from "next-auth/react";
+import React, { useState } from 'react';
+import Layout from '../../components/Layout';
+import jwt from 'jsonwebtoken';
+import axios from 'axios';
+import { useSession } from 'next-auth/react';
+import Link from 'next/link';
 
 export default function JwtScreen() {
   const { data: session } = useSession();
   const userEmail = session?.user.email;
 
   const [username, setUsername] = useState(userEmail);
-  const [token, setToken] = useState("");
-  const [decoded, setDecoded] = useState("");
-  const [result, setResult] = useState("");
+  const [token, setToken] = useState('');
+  const [decoded, setDecoded] = useState('');
+  const [result, setResult] = useState('');
 
   const genJwt = async () => {
-    await axios.post("/api/crypto/jwt", { username }).then((res) => {
+    await axios.post('/api/crypto/jwt', { username }).then((res) => {
       setToken(res.data.token);
-      localStorage.setItem("jwt", res.data.token);
+      localStorage.setItem('jwt', res.data.token);
       let decoded = jwt.decode(res.data.token);
       setDecoded(JSON.stringify(decoded));
     });
   };
 
   const verifyJwt = async () => {
-    await axios.post("/api/crypto/jwt-v", { token }).then((res) => {
+    await axios.post('/api/crypto/jwt-v', { token }).then((res) => {
       setResult(res.data.result);
     });
   };
@@ -45,9 +46,11 @@ export default function JwtScreen() {
             class="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:py-12 lg:px-16 xl:col-span-6"
           >
             <div class="max-w-xl lg:max-w-3xl">
-              <a class="block text-orange-300" href="/">
-                <span class="sr-only">Home</span>
-              </a>
+              <Link href="/">
+                <a class="block text-orange-300">
+                  <span class="sr-only">Home</span>
+                </a>
+              </Link>
 
               <h1 class="mt-10 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
                 JWT (JSON Web Token)
@@ -151,7 +154,7 @@ export default function JwtScreen() {
                     class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                     name="jwt"
                     id="jwt"
-                    value={result ? "검증된 토큰" : "검증되지 않음"}
+                    value={result ? '검증된 토큰' : '검증되지 않음'}
                     readOnly
                   />
                 </div>
