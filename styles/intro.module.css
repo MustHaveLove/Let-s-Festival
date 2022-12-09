@@ -1,0 +1,280 @@
+.main {
+  width: 100%;
+  height: 1000px;
+}
+
+.left {
+  width: 50%;
+  height: 99%;
+  float: left;
+  /* border: 1px solid; */
+}
+
+.right {
+  width: 50%;
+  height: 99%;
+  float: right;
+  /* border: 1px solid; */
+}
+
+.intro_a {
+  width: 90%;
+  height: 25%;
+  margin-left: 5%;
+  margin-top: 5%;
+  /* border: 1px solid; */
+}
+
+.a_title {
+  width: 95%;
+  height: 30%;
+  margin: 2%;
+  font-size: 2vw;
+  font-weight: bold;
+  text-align: center;
+  background-color: beige;
+  border-radius: 8px;
+  /* border: 1px solid; */
+}
+
+.a_write {
+  width: 95%;
+  height: 60%;
+  margin-top: 1%;
+  margin: 2%;
+  /* border: 1px solid; */
+  text-align: center;
+  max-height: 60%;
+  overflow: auto;
+  background-color: lightgray;
+  border-radius: 8px;
+}
+
+.intro_b {
+  width: 90%;
+  height: 25%;
+  margin-left: 5%;
+  margin-top: 5%;
+  /* border: 1px solid; */
+  display: flex;
+  margin: 10px auto;
+  background-color: lightpink;
+  border-radius: 8px;
+}
+
+.intro_c {
+  width: 90%;
+  height: 35%;
+  margin-left: 5%;
+  margin-top: 5%;
+  /* border: 1px solid; */
+}
+
+.intro_c1 {
+  width: 30%;
+  height: 80%;
+  margin-left: 5%;
+  margin-top: 5%;
+  float: left;
+  border: 1px solid;
+}
+
+.intro_c2 {
+  width: 55%;
+  height: 80%;
+  margin-left: 5%;
+  margin-top: 5%;
+  /* border: 1px solid; */
+  float: left;
+  box-sizing: border-box;
+}
+
+/* 버튼 */
+
+.btn {
+  background: gray;
+  border: 3px solid #fff;
+  border-radius: 15px;
+  color: #fff;
+  display: block;
+  font-size: 0.3em;
+  font-weight: bold;
+  padding: 2em 4em;
+  margin: 10% auto;
+}
+
+.btn:hover {
+  background-color: black;
+  color: #2ecc71;
+}
+
+/* 슬라이드 */
+
+.silde {
+  width: 80%;
+  height: 80%;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+
+.slideimgbox {
+  width: 100%;
+  height: 800px;
+  position: relative;
+  overflow: hidden;
+}
+
+.slideimg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -2px;
+  object-fit: fill;
+  text-align: center;
+}
+
+/* 사분할 */
+
+.intro_main_container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin: 2% auto;
+}
+
+.intro_main_a {
+  box-sizing: border-box;
+  border: 3px solid black;
+  border-radius: 10px;
+  padding: 5%;
+  background-color: salmon;
+  margin: 1%;
+}
+
+.intro_main_b {
+  box-sizing: border-box;
+  border: 3px solid black;
+  border-radius: 10px;
+  /* padding: 40%; */
+  background-color: yellow;
+  margin: 1%;
+
+  grid-template-rows: 1fr 2fr;
+}
+
+.intro_main_c {
+  box-sizing: border-box;
+  border: 3px solid black;
+  border-radius: 10px;
+  padding: 1%;
+  background-color: yellowgreen;
+  margin: 1%;
+}
+
+.intro_main_d {
+  box-sizing: border-box;
+  border: 3px solid black;
+  border-radius: 10px;
+  /* padding: 40%; */
+  background-color: lightblue;
+  margin: 1%;
+
+  align-items: center;
+  display: grid;
+}
+
+/* 설명 슬라이드 */
+
+.intro_main_silde {
+  width: 100%;
+  height: 100%;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+
+.intro_main_slideimgbox {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+.intro_main_slideimg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  text-align: center;
+}
+
+/* 축제 설명 */
+
+.intro_main_b_inner_container {
+  display: grid;
+
+  /* GapWidth를 5픽셀로 지정합니다. */
+  grid-gap: 5px;
+  grid-template-rows: 20% 1fr;
+}
+
+.intro_main_b_inner_a {
+  box-sizing: border-box;
+  border: 3px solid black;
+  border-radius: 10px;
+  padding: 1%;
+  margin: 1%;
+  background: lightgreen;
+  padding: 1%;
+  text-align: center;
+  font-size: 40px;
+}
+
+.intro_main_b_inner_b {
+  box-sizing: border-box;
+  border: 3px solid black;
+  border-radius: 10px;
+  padding: 1%;
+  background-color: yellow;
+  margin: 1%;
+  font-size: 15px;
+}
+
+.intro_main_b_inner_b > p {
+  background: lightgoldenrodyellow;
+  padding: 8px;
+  text-align: center;
+}
+/* contact */
+
+.background_image {
+  width: 100%;
+  height: 100%;
+  background-image: url(../public/images/mail.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  overflow: auto;
+  /* opacity: 0.80; */
+}
+
+
+.Map_title {
+  font-size: 32px;
+  position: relative;
+  margin-bottom: 100px;
+  font-weight: bold;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  bottom: -20px;
+}
+
+.Map_title_a {
+  content: '';
+  width: 350px;
+  height: 4px;
+  background: linear-gradient(to right, #2563eb,#a21caf);
+  position: relative;
+  bottom: 50px;
+  align-items: center;
+  margin: auto;
+}

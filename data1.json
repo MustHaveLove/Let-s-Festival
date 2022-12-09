@@ -1,0 +1,13 @@
+{
+  "posts": [
+    {
+      "title": "왜 안돼",
+      "author": "왜 안돼",
+      "id": 1
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

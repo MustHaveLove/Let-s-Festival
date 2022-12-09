@@ -1,0 +1,324 @@
+@font-face {
+  font-family: 'BMHANNAPro';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.0/BMHANNAPro.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.mainbox {
+  justify-items: center;
+  display: grid;
+  grid-template-rows: repeat(3, 15vw);
+  grid-template-columns: repeat(8, 15vw);
+  grid-auto-flow: column;
+  height: 100vh;
+  padding: 8px 15vw;
+  margin-bottom: 80px;
+}
+
+.buttonbox {
+  position: relative;
+  display: flex;
+  width: 15vw;
+  height: 15vw;
+  padding: 0px;
+  margin: 0px;
+  text-align: left;
+  grid-column-end: span 2;
+  cursor: pointer;
+}
+
+.profilebox1 {
+  margin-top: 6rem;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(67, 164, 131);
+  box-shadow: rgb(0 0 0 / 20%) 0px 8px 12px;
+  z-index: 1;
+}
+
+.profilebox2 {
+  margin-top: 6rem;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(112, 112, 112);
+  box-shadow: rgb(0 0 0 / 20%) 0px 8px 12px;
+  z-index: 1;
+}
+
+.profilebox3 {
+  margin-top: 6rem;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(69, 74, 131);
+  box-shadow: rgb(0 0 0 / 20%) 0px 8px 12px;
+  z-index: 90;
+  z-index: 1;
+}
+
+.profilebox4 {
+  margin-top: 6rem;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 29, 29);
+  box-shadow: rgb(0 0 0 / 20%) 0px 8px 12px;
+  z-index: 1;
+}
+
+.profilebox5 {
+  margin-top: 6rem;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(95, 27, 103);
+  box-shadow: rgb(0 0 0 / 20%) 0px 8px 12px;
+  z-index: 1;
+}
+
+.profileboxbox {
+  width: 100%;
+  height: 100%;
+  max-height: 100vh;
+  box-sizing: border-box;
+  padding: 1vw;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+
+.text {
+  font-family: 'BMHANNAPro';
+  font-size: 2vw;
+  color: white;
+}
+
+.textheader {
+  font-family: 'BMHANNAPro';
+  font-size: 0.9vw;
+  text-align: right;
+  color: white;
+}
+
+.textbody {
+  font-family: 'BMHANNAPro';
+  font-size: 2.4vw;
+  font-weight: 200;
+  color: white;
+  line-height: 1;
+  padding-top: 1rem;
+}
+
+.textfooter {
+  font-family: 'BMHANNAPro';
+  font-size: 0.9vw;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.CDbox1 {
+  margin-top: 6rem;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background-image: url('../public/images/cd.jpg');
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  transform: translateX(60%) rotate(0deg);
+  transition: all 5s cubic-bezier(0.25, 0.1, 0.25, 1) 0s;
+  transition-duration: 5s;
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition-delay: 0s;
+  transition-property: all;
+  box-sizing: border-box;
+  box-shadow: rgb(0 0 0 / 20%) 0px 8px 12px;
+  border: 8px solid white;
+}
+
+.CDbox1:hover {
+  content: '';
+  position: absolute;
+  width: 50% + 16px;
+  height: 100%;
+  border-radius: 100%;
+  box-shadow: rgb(0 0 0 / 20%) 0px 8px 12px;
+  transform: translateX(80%) rotate(720deg);
+  transition: all 5s cubic-bezier(0.25, 0.1, 0.25, 1) 0s;
+  transition-duration: 5s;
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition-delay: 0s;
+  transition-property: all;
+  border: 8px solid black;
+}
+
+.CDbox2 {
+  margin-top: 6rem;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background-image: url('../public/images/cd2.jpg');
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  transform: translateX(60%) rotate(0deg);
+  transition: all 5s cubic-bezier(0.25, 0.1, 0.25, 1) 0s;
+  transition-duration: 5s;
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition-delay: 0s;
+  transition-property: all;
+  box-sizing: border-box;
+  box-shadow: rgb(0 0 0 / 20%) 0px 8px 12px;
+  border: 8px solid white;
+}
+
+.CDbox2:hover {
+  content: '';
+  position: absolute;
+  width: 50% + 16px;
+  height: 100%;
+  border-radius: 100%;
+  box-shadow: rgb(0 0 0 / 20%) 0px 8px 12px;
+  transform: translateX(80%) rotate(720deg);
+  transition: all 5s cubic-bezier(0.25, 0.1, 0.25, 1) 0s;
+  transition-duration: 5s;
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition-delay: 0s;
+  transition-property: all;
+  border: 8px solid black;
+}
+
+.CDbox3 {
+  margin-top: 6rem;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background-image: url('../public/images/cd3.png');
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  transform: translateX(60%) rotate(0deg);
+  transition: all 5s cubic-bezier(0.25, 0.1, 0.25, 1) 0s;
+  transition-duration: 5s;
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition-delay: 0s;
+  transition-property: all;
+  box-sizing: border-box;
+  box-shadow: rgb(0 0 0 / 20%) 0px 8px 12px;
+  border: 8px solid white;
+}
+
+.CDbox3:hover {
+  content: '';
+  position: absolute;
+  width: 50% + 16px;
+  height: 100%;
+  border-radius: 100%;
+  box-shadow: rgb(0 0 0 / 20%) 0px 8px 12px;
+  transform: translateX(80%) rotate(720deg);
+  transition: all 5s cubic-bezier(0.25, 0.1, 0.25, 1) 0s;
+  transition-duration: 5s;
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition-delay: 0s;
+  transition-property: all;
+  border: 8px solid black;
+}
+
+.CDbox4 {
+  margin-top: 6rem;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background-image: url('../public/images/cd4.jpg');
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  transform: translateX(60%) rotate(0deg);
+  transition: all 5s cubic-bezier(0.25, 0.1, 0.25, 1) 0s;
+  transition-duration: 5s;
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition-delay: 0s;
+  transition-property: all;
+  box-sizing: border-box;
+  box-shadow: rgb(0 0 0 / 20%) 0px 8px 12px;
+  border: 8px solid white;
+}
+
+.CDbox4:hover {
+  content: '';
+  position: absolute;
+  width: 50% + 16px;
+  height: 100%;
+  border-radius: 100%;
+  box-shadow: rgb(0 0 0 / 20%) 0px 8px 12px;
+  transform: translateX(80%) rotate(720deg);
+  transition: all 5s cubic-bezier(0.25, 0.1, 0.25, 1) 0s;
+  transition-duration: 5s;
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition-delay: 0s;
+  transition-property: all;
+  border: 8px solid black;
+}
+
+.CDbox5 {
+  margin-top: 6rem;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background-image: url('../public/images/cd5.jpg');
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  transform: translateX(60%) rotate(0deg);
+  transition: all 5s cubic-bezier(0.25, 0.1, 0.25, 1) 0s;
+  transition-duration: 5s;
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition-delay: 0s;
+  transition-property: all;
+  box-sizing: border-box;
+  box-shadow: rgb(0 0 0 / 20%) 0px 8px 12px;
+  border: 8px solid white;
+}
+
+.CDbox5:hover {
+  content: '';
+  position: absolute;
+  width: 50% + 16px;
+  height: 100%;
+  border-radius: 100%;
+  box-shadow: rgb(0 0 0 / 20%) 0px 8px 12px;
+  transform: translateX(80%) rotate(720deg);
+  transition: all 5s cubic-bezier(0.25, 0.1, 0.25, 1) 0s;
+  transition-duration: 5s;
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition-delay: 0s;
+  transition-property: all;
+  border: 8px solid black;
+}

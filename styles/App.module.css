@@ -1,0 +1,115 @@
+.App {
+  overflow: hidden;
+  width: 100%;
+  height: 580px;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.card {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 750px;
+  height: 525px;
+  object-fit: cover;
+  border-radius: 25px, 25px, 25px, 25px/ 25px, 25px, 25px, 25px;
+}
+
+.cardactive {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 550px;
+  height: 525px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.cardleft {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 550px;
+  height: 525px;
+  object-fit: cover;
+  transform: translateX(-125%) scale(0.8);
+  transition: 500ms;
+  opacity: 0.3;
+}
+
+.cardlefta {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 550px;
+  height: 525px;
+  object-fit: cover;
+  transform: translateX(-205%) scale(0.8);
+  transition: 500ms;
+  opacity: 0;
+}
+
+.cardright {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 550px;
+  height: 525px;
+  object-fit: cover;
+  transform: translateX(125%) scale(0.8);
+  transition: 500ms;
+  opacity: 0.3;
+}
+
+.cardrighta {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 550px;
+  height: 525px;
+  object-fit: cover;
+  transform: translateX(205%) scale(0.8);
+  transition: 500ms;
+  opacity: 0;
+}
+
+.fig {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  z-index: 2;
+
+  text-align: center;
+}
+
+.imgbox {
+  width: 550px;
+  height: 525px;
+
+  overflow: hidden;
+}

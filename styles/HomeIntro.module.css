@@ -1,0 +1,71 @@
+.MainFont {
+  font-size: 40px;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  font-weight: bold;
+  flex-direction: column;
+  z-index: 1;
+  top: 450px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.MainFont2 {
+  font-size: 40px;
+  color: #fffb1dfb;
+  position: absolute;
+  font-weight: bold;
+  flex-direction: column;
+  z-index: 1;
+  top: 550px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.MainFont3 {
+  font-size: 32px;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  font-weight: bold;
+  flex-direction: column;
+  z-index: 1;
+  top: 1200px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.h2 {
+  content: "";
+  width: 350px;
+  height: 3px;
+  background: linear-gradient(to right, #00b9ff, #e7224d);
+  position: absolute;
+  z-index: 1;
+  top: 650px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Image {
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.9;
+}
+
+.card_box {
+  width: 100%;
+  max-width: 1535px;
+  height: 2047px;
+  background: black;
+  box-shadow: -10px 10px 40px rgba(12, 12, 12, 0.308);
+  position: absolute;
+  overflow: hidden;
+  margin: auto;
+  top: 65px;
+  opacity: 0.6;
+  z-index: 1;
+}
