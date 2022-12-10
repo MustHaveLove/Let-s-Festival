@@ -17,7 +17,7 @@ export default function developers() {
                   <div>정보보호학과</div>
                   <div>91812282</div>
                 </div>
-                <div className={Profile.textbody}>류 재 원</div>
+                <div className={Profile.textbody}>류재원</div>
               </div>
               <div className={Profile.textfooter}>
                 <Link
