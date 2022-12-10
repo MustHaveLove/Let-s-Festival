@@ -39,16 +39,18 @@ export default function Home() {
             </p>
 
             <div class="mt-8 flex flex-wrap justify-center gap-4">
-              <Link href="/signin">
-                <a class="block w-full rounded bg-orange-400 px-12 py-3 text-sm font-medium text-white shadow hover:bg-orange-500 focus:outline-none focus:ring active:bg-orange-500 sm:w-auto">
-                  로그인
-                </a>
+              <Link
+                href="/signin"
+                class="block w-full rounded bg-orange-400 px-12 py-3 text-sm font-medium text-white shadow hover:bg-orange-500 focus:outline-none focus:ring active:bg-orange-500 sm:w-auto"
+              >
+                로그인
               </Link>
 
-              <Link href="/signup">
-                <a class="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-orange-400 shadow hover:text-orange-600 focus:outline-none focus:ring active:text-orange-500 sm:w-auto">
-                  회원가입
-                </a>
+              <Link
+                href="/signup"
+                class="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-orange-400 shadow hover:text-orange-600 focus:outline-none focus:ring active:text-orange-500 sm:w-auto"
+              >
+                회원가입
               </Link>
             </div>
           </div>
@@ -87,9 +89,9 @@ export default function Home() {
         ></iframe>
       </div>
 
-      <a href="#" className={Styles.back_to_top}>
+      <Link href="#" className={Styles.back_to_top}>
         <ArrowUpIcon></ArrowUpIcon>
-      </a>
+      </Link>
     </Layout>
   );
 }

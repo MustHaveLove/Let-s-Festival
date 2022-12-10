@@ -6,7 +6,7 @@ export default function Post(props) {
   const [post, setPost] = useState(props.data);
 
   const getAll = async () => {
-    const res = await fetch('http://localhost:5000/posts');
+    const res = await fetch('https://json-jbupark21.vercel.app/posts');
     const data = await res.json();
 
     setPost(data);
@@ -14,7 +14,7 @@ export default function Post(props) {
 
   const deletePost = async (id) => {
     console.log('tes');
-    await fetch('http://localhost:5000/posts/' + id, {
+    await fetch('https://json-jbupark21.vercel.app/posts' + id, {
       method: 'DELETE',
     });
     getAll();
@@ -53,7 +53,7 @@ export default function Post(props) {
   return (
     <Layout title="Board">
       <div>
-        <div className="container mx-auto px-4 max-w-screen-sm h-screen">
+        <div className="container mx-auto px-4 max-w-screen-sm">
           <div>
             <Link href="/Boardcreate">
               <div className="bg-red-600 mt-20 text-center text-white px-4  py-2 my-4 inline-block">
@@ -69,7 +69,7 @@ export default function Post(props) {
 }
 
 export async function getServerSideProps(context) {
-  const res = await fetch('http://localhost:5000/posts');
+  const res = await fetch('https://json-jbupark21.vercel.app/posts');
   const data = await res.json();
 
   if (!data) {

@@ -16,7 +16,7 @@ export default function FormPost(props) {
     }));
   };
   const storeData = async (e) => {
-    await fetch('http://localhost:5000/posts/', {
+    await fetch('https://json-jbupark21.vercel.app/posts', {
       method: 'POST',
       body: JSON.stringify(data),
       headers: {
@@ -30,7 +30,7 @@ export default function FormPost(props) {
   };
 
   const updateData = async (e) => {
-    await fetch('http://localhost:5000/posts/' + props.dataPost.id, {
+    await fetch('https://json-jbupark21.vercel.app/posts' + props.dataPost.id, {
       method: 'PUT',
       body: JSON.stringify(data),
       headers: {
@@ -40,19 +40,18 @@ export default function FormPost(props) {
       .then((response) => response.json())
       .then((json) => console.log(json));
 
-    router.push('/');
+    router.push('/Boardindex');
   };
 
   const handleButton = (action) => {
     if (action == 'add') {
       return (
-        <Link href="/Boardindex">
-          <a
-            className="rounded text-gray-100 mt-96 absolute px-5 py-1 bg-red-500 hover:shadow-inner hover:bg-red-700 transition-all duration-300"
-            onClick={storeData}
-          >
-            올리기
-          </a>
+        <Link
+          href="/Boardindex"
+          className="rounded text-gray-100 mt-96 absolute px-5 py-1 bg-red-500 hover:shadow-inner hover:bg-red-700 transition-all duration-300"
+          onClick={storeData}
+        >
+          올리기
         </Link>
       );
     } else if (action == 'update') {

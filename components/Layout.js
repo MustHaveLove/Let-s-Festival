@@ -48,12 +48,10 @@ export default function Layout({ title, children }) {
               </svg>
             </button>
 
-            <Link href="/">
-              <a class="flex">
-                <div>
-                  <img src="/logo.png" class="h-16"></img>
-                </div>
-              </a>
+            <Link href="/" class="flex">
+              <div>
+                <img src="/logo.png" class="h-16"></img>
+              </div>
             </Link>
           </div>
 
@@ -62,34 +60,39 @@ export default function Layout({ title, children }) {
               aria-label="Site Nav"
               class="hidden lg:flex lg:gap-4 lg:text-xs lg:font-bold lg:uppercase lg:tracking-wide lg:text-gray-500"
             >
-              <Link href="/Fmain">
-                <a class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-orange-400 mx-4">
-                  축제 소개
-                </a>
+              <Link
+                href="/Fmain"
+                class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-orange-400 mx-4"
+              >
+                축제 소개
               </Link>
 
-              <Link href="/Boardindex">
-                <a class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-orange-400 mx-4">
-                  게시판
-                </a>
+              <Link
+                href="/Boardindex"
+                class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-orange-400 mx-4"
+              >
+                게시판
               </Link>
 
-              <Link href="/contact">
-                <a class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-orange-400 mx-4">
-                  문의하기
-                </a>
+              <Link
+                href="/contact"
+                class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-orange-400 mx-4"
+              >
+                문의하기
               </Link>
 
-              <Link href="/about">
-                <a class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-orange-400 mx-4">
-                  개발자
-                </a>
+              <Link
+                href="/about"
+                class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-orange-400 mx-4"
+              >
+                개발자
               </Link>
 
-              <Link href="/crypto/jwt">
-                <a class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-orange-400 mx-4">
-                  Jwt
-                </a>
+              <Link
+                href="/crypto/jwt"
+                class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-orange-400 mx-4"
+              >
+                Jwt
               </Link>
             </nav>
 
@@ -97,14 +100,14 @@ export default function Layout({ title, children }) {
               <div class="flex items-center divide-x divide-gray-100 border-x border-gray-100">
                 <span>
                   {status === 'loading' ? (
-                    <a
+                    <div
                       className="p-2 inline-flex justify-center rounded-md
             bg-orange-400 bg-opacity-80 px-4 py-2 text-sm font-medium
             text-white hover:bg-opacity-100 focus:outline-none focus-visible:ring-2
             focus-visible:ring-white focus-visible:ring-opacity-75"
                     >
                       연결중..
-                    </a>
+                    </div>
                   ) : session?.user ? (
                     <Menu as="div" className="relative inline-block text-left">
                       <Menu.Button
@@ -179,15 +182,14 @@ export default function Layout({ title, children }) {
                       </Menu.Items>
                     </Menu>
                   ) : (
-                    <Link href="/signin">
-                      <a
-                        className="p-2 inline-flex justify-center rounded-md
+                    <Link
+                      href="/signin"
+                      className="p-2 inline-flex justify-center rounded-md
             bg-orange-400 bg-opacity-80 px-4 py-2 text-sm font-medium
             text-white hover:bg-opacity-100 focus:outline-none focus-visible:ring-2
             focus-visible:ring-white focus-visible:ring-opacity-75"
-                      >
-                        로그인
-                      </a>
+                    >
+                      로그인
                     </Link>
                   )}
                 </span>
@@ -203,9 +205,7 @@ export default function Layout({ title, children }) {
         <div class="py-3 uk-link-reset">
           <div class="flex flex-col items-center justify-between lg:flex-row max-w-6xl mx-auto lg:space-y-0 space-y-3">
             <div class="flex space-x-2 text-gray-700 uppercase">
-              <Link href="/about">
-                <a>About</a>
-              </Link>
+              <Link href="/about">About</Link>
             </div>
             <p class="capitalize">
               Copyright &copy; 2022 Powered by Team FallGuys

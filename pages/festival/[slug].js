@@ -1,20 +1,18 @@
-import Image from "next/image";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import React from "react";
-import Layout from "../../components/Layout";
-import data from '../../utils/data'
-import Slider from "react-slick";
-import Styles from "../../styles/intro.module.css";
-import Searchmap from "../../components/Searchmap";
-import Roadmap from "../../components/Roadmap";
-
+import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import React from 'react';
+import Layout from '../../components/Layout';
+import data from '../../utils/data';
+import Slider from 'react-slick';
+import Styles from '../../styles/intro.module.css';
+import Searchmap from '../../components/Searchmap';
+import Roadmap from '../../components/Roadmap';
 
 export default function FestivalScreen() {
-
-  const { query } = useRouter()
-  const { slug } = query
-  const festival = data.festivals.find((x) => x.slug === slug)
+  const { query } = useRouter();
+  const { slug } = query;
+  const festival = data.festivals.find((x) => x.slug === slug);
 
   const settings = {
     arrows: true,
@@ -26,7 +24,6 @@ export default function FestivalScreen() {
     autoplay: true,
     autoplaySpeed: 3000,
   };
-
 
   if (!festival) {
     return <Layout title="Festival Not Found">Festival Not Found</Layout>;

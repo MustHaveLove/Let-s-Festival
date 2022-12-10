@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../components/Layout';
 import Profile from '../styles/developer.module.css';
 import { BsGithub } from 'react-icons/bs';
+import Link from 'next/link';
 
 export default function developers() {
   return (
@@ -19,14 +20,14 @@ export default function developers() {
                 <div className={Profile.textbody}>류 재 원</div>
               </div>
               <div className={Profile.textfooter}>
-                <a
+                <Link
                   href="https://github.com/MustHaveLove"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={Profile.text}
                 >
                   <BsGithub />
-                </a>
+                </Link>
                 {/* <div className={Profile.textheader}>호</div> */}
               </div>
             </div>
@@ -46,14 +47,14 @@ export default function developers() {
                 <div className={Profile.textbody}>김 다 혁</div>
               </div>
               <div className={Profile.textfooter}>
-                <a
+                <Link
                   href="https://github.com/JBUkim"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={Profile.text}
                 >
                   <BsGithub />
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -71,14 +72,14 @@ export default function developers() {
                 <div className={Profile.textbody}>손 진 빈</div>
               </div>
               <div className={Profile.textfooter}>
-                <a
+                <Link
                   href="https://github.com/withsjb/festivall"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={Profile.text}
                 >
                   <BsGithub />
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -96,14 +97,14 @@ export default function developers() {
                 <div className={Profile.textbody}>박 범 주</div>
               </div>
               <div className={Profile.textfooter}>
-                <a
+                <Link
                   href="https://github.com/JBUpark21"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={Profile.text}
                 >
                   <BsGithub />
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -121,14 +122,14 @@ export default function developers() {
                 <div className={Profile.textbody}>지 영 욱</div>
               </div>
               <div className={Profile.textfooter}>
-                <a
+                <Link
                   href="https://github.com/KooSinB"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={Profile.text}
                 >
                   <BsGithub />
-                </a>
+                </Link>
               </div>
             </div>
           </div>

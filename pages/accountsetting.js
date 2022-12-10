@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
-import { signIn, useSession } from "next-auth/react";
-import { useForm } from "react-hook-form";
-import { toast } from "react-toastify";
-import { getError } from "../utils/error";
-import axios from "axios";
-import Layout from "../components/Layout";
-import Link from "next/link";
-import { useRouter } from "next/router";
+import React, { useEffect } from 'react';
+import { signIn, useSession } from 'next-auth/react';
+import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
+import { getError } from '../utils/error';
+import axios from 'axios';
+import Layout from '../components/Layout';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 export default function AccountsettingScreen() {
   const router = useRouter();
@@ -29,23 +29,23 @@ export default function AccountsettingScreen() {
   } = useForm();
 
   useEffect(() => {
-    setValue("name", session?.user.name);
-    setValue("email", session?.user.email);
+    setValue('name', session?.user.name);
+    setValue('email', session?.user.email);
   }, [session?.user, setValue]);
 
   const submitHandler = async ({ name, email, password }) => {
     try {
-      await axios.put("/api/auth/update", {
+      await axios.put('/api/auth/update', {
         name,
         email,
         password,
       });
-      const result = await signIn("credentials", {
+      const result = await signIn('credentials', {
         redirect: false,
         email,
         password,
       });
-      toast.success("Profile updated successfully");
+      toast.success('Profile updated successfully');
       if (result.error) {
         toast.error(result.error);
       }
@@ -204,8 +204,8 @@ export default function AccountsettingScreen() {
                     className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                     id="name"
                     autoFocus
-                    {...register("name", {
-                      required: "변경할 이름을 입력해주세요.",
+                    {...register('name', {
+                      required: '변경할 이름을 입력해주세요.',
                     })}
                   />
                   {errors.name && (
@@ -222,12 +222,12 @@ export default function AccountsettingScreen() {
                   </label>
                   <input
                     type="email"
-                    {...register("email", {
-                      required: "변경할 이메일을 입력해주세요.",
+                    {...register('email', {
+                      required: '변경할 이메일을 입력해주세요.',
                       pattern: {
                         value:
                           /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/i,
-                        message: "이메일을 형식을 지켜주세요.",
+                        message: '이메일을 형식을 지켜주세요.',
                       },
                     })}
                     class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
@@ -247,11 +247,11 @@ export default function AccountsettingScreen() {
                   </label>
                   <input
                     type="password"
-                    {...register("password", {
-                      required: "비밀번호를 입력하세요.",
+                    {...register('password', {
+                      required: '비밀번호를 입력하세요.',
                       minLength: {
                         value: 6,
-                        message: "비밀번호를 5글자 이상 입력하세요.",
+                        message: '비밀번호를 5글자 이상 입력하세요.',
                       },
                     })}
                     class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
@@ -276,12 +276,12 @@ export default function AccountsettingScreen() {
                     class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                     type="password"
                     id="confirmPassword"
-                    {...register("confirmPassword", {
-                      required: "비밀번호를 한번더 입력해주세요.",
-                      validate: (value) => value === getValues("password"),
+                    {...register('confirmPassword', {
+                      required: '비밀번호를 한번더 입력해주세요.',
+                      validate: (value) => value === getValues('password'),
                       minLength: {
                         value: 3,
-                        message: "비밀번호를 2글자 이상 입력하세요.",
+                        message: '비밀번호를 2글자 이상 입력하세요.',
                       },
                     })}
                   />
@@ -291,7 +291,7 @@ export default function AccountsettingScreen() {
                     </div>
                   )}
                   {errors.confirmPassword &&
-                    errors.confirmPassword.type === "validate" && (
+                    errors.confirmPassword.type === 'validate' && (
                       <div className="text-red-500 ">
                         비밀번호가 일치하지 않습니다.
                       </div>
@@ -308,13 +308,13 @@ export default function AccountsettingScreen() {
                 </div>
 
                 <div class="col-span-6 sm:col-span-3">
-                  <a
-                    href={`/signin?redirect=${redirect || "/"}`}
+                  <Link
+                    href={`/signin?redirect=${redirect || '/'}`}
                     class="inline-block shrink-0 rounded-md border border-orange-300 bg-orange-300 px-12 py-3 text-sm font-medium text-white transition 
                   hover:bg-transparent hover:text-orange-300 focus:outline-none focus:ring-orange-400 focus:ring-2 active:text-orange-500"
                   >
                     메인 돌아가기
-                  </a>
+                  </Link>
                 </div>
               </form>
             </div>

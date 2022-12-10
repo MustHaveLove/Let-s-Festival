@@ -216,12 +216,12 @@ export default function RegisterScreen() {
                 <div class="col-span-6 flex justify-center">
                   <p class="text-base inline-block mb-2 text-[#adadad] hover:text-primary">
                     이미 계정이 있으신가요? &nbsp;
-                    <a
+                    <Link
                       href={`/signin?redirect=${redirect || '/'}`}
                       class="text-primary text-blue-300 hover:underline"
                     >
                       로그인
-                    </a>
+                    </Link>
                   </p>
                 </div>
               </form>

@@ -1,6 +1,6 @@
-import { getSession } from "next-auth/react";
-import LoginLog from "../../../models/LoginLog";
-import db from "../../../utils/db";
+import { getSession } from 'next-auth/react';
+import LoginLog from '../../../models/LoginLog';
+import db from '../../../utils/db';
 
 async function handler(req, res) {
   const provider = req.body.provider;
@@ -8,7 +8,7 @@ async function handler(req, res) {
 
   const session = await getSession({ req });
   if (!session) {
-    return res.status(401).send({ message: "signin required" });
+    return res.status(401).send({ message: 'signin required' });
   }
   const { user } = session;
   const email = user.email;
@@ -22,7 +22,7 @@ async function handler(req, res) {
 
   await newLoginLog.save();
   await db.disconnect();
-  res.json({ message: "Login is logged" });
+  res.json({ message: 'Login is logged' });
 }
 
 export default handler;

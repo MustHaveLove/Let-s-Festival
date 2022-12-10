@@ -1,8 +1,8 @@
-import "../styles/globals.css";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Script from "next/script";
-import { SessionProvider } from "next-auth/react";
+import '../styles/globals.css';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import Script from 'next/script';
+import { SessionProvider } from 'next-auth/react';
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   return (
@@ -23,10 +23,10 @@ function Auth({ children }) {
   const { status } = useSession({
     required: true,
     onUnauthenticated() {
-      router.push("/unauthorized?message=login required");
+      router.push('/unauthorized?message=login required');
     },
   });
-  if (status === "loading") {
+  if (status === 'loading') {
     return <div>Loading...</div>;
   }
 
@@ -34,4 +34,3 @@ function Auth({ children }) {
 }
 
 export default MyApp;
-
