@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
     <>
       <SessionProvider session={session}>
         <Script
-          src="//dapi.kakao.com/v2/maps/sdk.js?appkey=66a5cde096ffa869666f3a8c941b7e5e&libraries=services,clusterer&autoload=false"
+          src="//dapi.kakao.com/v2/maps/sdk.js?appkey=35d0ebb8043b1e6472daa334b0721af2&libraries=services,clusterer&autoload=false"
           strategy="beforeInteractive"
         />
         {Component.auth ? (
