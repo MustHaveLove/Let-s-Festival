@@ -112,6 +112,26 @@
   box-sizing: border-box;
 }
 
+.Youtube_center1 {
+  justify-content: center;
+  height: 60vh;
+  display: flex;
+  margin-bottom: 100px;
+  margin: auto;
+  width: 50%;
+  position: relative;
+  place-items: center;
+  z-index: 1;
+  bottom: 5vh;
+}
+
+.Youtube_box1 {
+  flex: 1;
+  height: 50vh;
+  margin: 0px 2%;
+  box-sizing: border-box;
+}
+
 /* introduce 페이지  */
 
 .KakaomapB_intro {
