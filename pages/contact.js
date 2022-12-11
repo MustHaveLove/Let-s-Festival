@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../components/Layout';
-
+import Link from 'next/link';
+import {AiFillStar} from "react-icons/ai"
 
 export default function Form() {
 
@@ -20,7 +21,7 @@ export default function Form() {
             <h1 className="text-3xl font-bold mt-4 dark:text-gray-50 text-gray-700 font-mono">
               문의사항이 있으신가요?
             </h1>
-            <p className="text-sm text-gray-700 mt-4 font-light dark:text-gray-200 font-mono">
+            <p className="text-sm text-gray-700 mt-4 font-light dark:text-orange-300 font-mono">
               오른쪽에 있는 양식을 작성해서 이메일로 보내주세요. 최대한 빠른
               시일내로 답장해 드리겠습니다.
             </p>
@@ -105,7 +106,7 @@ export default function Form() {
             연락처
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 mx-2 md:grid-cols-3 gap-6 max-w-6xl md:mx-auto my-20">
-            <div className="card p-8 shadow rounded-md flex flex-row items-center space-x-4 hover:cursor-pointer hover:shadow-lg transition duration-200">
+            <div className="card p-8 shadow rounded-md flex flex-row items-center space-x-4 hover:cursor-pointer hover:shadow-lg transition duration-200 hover:ring-2 hover:ring-green-400">
               <svg
                 width="24"
                 height="24"
@@ -129,7 +130,7 @@ export default function Form() {
               </svg>
               <p className="text-gray-500 font-light">+82 010-1234-5678</p>
             </div>
-            <div className="card p-8 shadow rounded-md flex flex-row items-center space-x-4 hover:shadow-lg cursor-pointer transition duration-200">
+            <div className="card p-8 shadow rounded-md flex flex-row items-center space-x-4 hover:shadow-lg cursor-pointer transition duration-200 hover:ring-2 hover:ring-green-400">
               <svg
                 width="24"
                 height="24"
@@ -146,10 +147,10 @@ export default function Form() {
                 />
               </svg>
               <p className="text-gray-500 font-light">
-                letsfestival@mywebsite.com
+                letsfestival@jmail.ac.kr
               </p>
             </div>
-            <div className="card p-8 shadow rounded-md flex flex-row items-center space-x-4 hover:shadow-lg cursor-pointer transition duration-200">
+            <div className="card p-8 shadow rounded-md flex flex-row items-center space-x-4 hover:shadow-lg cursor-pointer transition duration-200 hover:ring-2 hover:ring-green-400">
               <svg
                 width="24"
                 height="24"
@@ -172,12 +173,324 @@ export default function Form() {
                 />
               </svg>
               <p className="text-gray-500 font-light">
-                letsfestival@mywebsite.com
+                중부대학교 정보보호학과
               </p>
             </div>
           </div>
         </section>
       </main>
+
+      <div class="mx-auto max-w-5xl px-4 py-8">
+        <section class="p-8">
+          <div class="divide-y divide-orange-300 rounded-xl border border-orange-300 bg-white">
+            <details class="group p-6" open>
+              <summary class="flex cursor-pointer items-center justify-between">
+                <h2 class="text-lg font-medium text-gray-900">
+                  01. Let&#39;s Festival 홈페이지에 문제가 발생합니다.
+                </h2>
+
+                <span class="relative ml-1.5 h-5 w-5 flex-shrink-0">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="absolute inset-0 h-5 w-5 opacity-100 group-open:opacity-0"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="absolute inset-0 h-5 w-5 opacity-0 group-open:opacity-100"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </span>
+              </summary>
+
+              <p class="mt-4 leading-relaxed text-gray-700">
+                홈페이지에서 발생하는 문제는 아래 안내해드리는 페이지에서 다양한
+                해결 방법을 확인하실 수 있습니다.
+                <br />
+                <br />
+                &#91;
+                <Link href="#" className="text-indigo-500">
+                  홈페이지 도움말
+                </Link>
+                &#93;
+                <br />
+                <br />
+                해당 페이지에 기재되지 않았거나 안내된 내용을 모두 수행했음에도
+                문제가 지속될 경우 문의 메일을 보내주세요.
+              </p>
+            </details>
+
+            <details class="group p-6">
+              <summary class="flex cursor-pointer items-center justify-between">
+                <h2 class="text-lg font-medium text-gray-900">
+                  02. 이메일이 기억나지 않습니다.{" "}
+                </h2>
+
+                <span class="relative ml-1.5 h-5 w-5 flex-shrink-0">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="absolute inset-0 h-5 w-5 opacity-100 group-open:opacity-0"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="absolute inset-0 h-5 w-5 opacity-0 group-open:opacity-100"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </span>
+              </summary>
+
+              <p class="mt-4 leading-relaxed text-gray-700">
+                개발자에게 문의하기를 통해 이름과 Email을 알려주시면 본인 인증을
+                통해 비밀번호를 다시 발급해드릴 수 있습니다.
+              </p>
+            </details>
+
+            <details class="group p-6">
+              <summary class="flex cursor-pointer items-center justify-between">
+                <h2 class="text-lg font-medium text-gray-900">
+                  03. 이름 또는 이메일을 변경하고 싶어요.
+                </h2>
+
+                <span class="relative ml-1.5 h-5 w-5 flex-shrink-0">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="absolute inset-0 h-5 w-5 opacity-100 group-open:opacity-0"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="absolute inset-0 h-5 w-5 opacity-0 group-open:opacity-100"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </span>
+              </summary>
+
+              <p class="mt-4 leading-relaxed text-gray-700">
+                로그인을 진행하신 후 우측 상단에 자신의 이름이 들어간 박스를
+                클릭하시면 계정 설정을 클릭해 이메일과 이름을 변경하실 수
+                있습니다.
+              </p>
+            </details>
+
+            <details class="group p-6">
+              <summary class="flex cursor-pointer items-center justify-between">
+                <h2 class="text-lg font-medium text-gray-900">
+                  04. 계정 도용(해킹) 당했어요.
+                </h2>
+
+                <span class="relative ml-1.5 h-5 w-5 flex-shrink-0">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="absolute inset-0 h-5 w-5 opacity-100 group-open:opacity-0"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="absolute inset-0 h-5 w-5 opacity-0 group-open:opacity-100"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </span>
+              </summary>
+
+              <p class="mt-4 leading-relaxed text-gray-700">
+                계정 도용으로 인해 피해가 발생한 경우, 아래와 같이 신고를 접수해
+                주시면 도움을 받으실 수 있습니다.
+                <br />
+                1. 신고센터 방문
+                <br />
+                2. 신고서 작성 및 신고 접수
+                <br />
+                <br />
+                &#8251; 유의사항
+                <br />
+                - 피해 발생일부터 15일 이내에 신고를 접수해 주셔야 조사가
+                정상적으로 진행될 수 있습니다.
+                <br />- 타인의 명의로 생성된 계정을 사용하는 경우는 도움을
+                받으실 수 없습니다.
+              </p>
+            </details>
+
+            <details class="group p-6">
+              <summary class="flex cursor-pointer items-center justify-between">
+                <h2 class="text-lg font-medium text-gray-900">
+                  05. 개발자에게 개인적으로 연락이 하고싶습니다.
+                </h2>
+
+                <span class="relative ml-1.5 h-5 w-5 flex-shrink-0">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="absolute inset-0 h-5 w-5 opacity-100 group-open:opacity-0"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="absolute inset-0 h-5 w-5 opacity-0 group-open:opacity-100"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </span>
+              </summary>
+
+              <p class="mt-4 leading-relaxed text-gray-700">
+                개발자들의 개인 이메일 주소는 다음과 같습니다.
+                <br />
+                <br />
+                &#8251; 유의사항
+                <br />
+                - 지나친 빈도로 연락을 하는 경우 스팸으로 분류되거나 차단될
+                가능성이 있습니다.
+                <br />
+                - 타인의 명의로 연락을 하는 경우는 도움을 받으실 수 없습니다.
+                <br />
+                <br />
+                <table class="w-full h-full divide-y-2 divide-gray-200 text-sm break-normal">
+                  <tbody class="divide-y divide-gray-200">
+                    <tr>
+                      <td class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                        김다혁
+                      </td>
+                      <td class="px-4 py-2 text-gray-700">
+                        91812103@jmail.ac.kr
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="px-4 py-2 font-medium text-gray-900">
+                        류재원
+                      </td>
+                      <td class="px-4 py-2 text-gray-700">
+                        91812282@jmail.ac.kr
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                        박범주
+                      </td>
+                      <td class=" px-4 py-2 text-gray-700">
+                        <a>91812323@jmail.ac.kr</a>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                        손진빈
+                      </td>
+                      <td class=" px-4 py-2 text-gray-700">
+                        <a>91812505@jmail.ac.kr</a>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                        지영욱
+                      </td>
+                      <td class=" px-4 py-2 text-gray-700">
+                        <a>91813157@jmail.ac.kr</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </p>
+            </details>
+          </div>
+        </section>
+      </div>
     </Layout>
   );
 }
