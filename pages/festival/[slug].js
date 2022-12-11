@@ -161,6 +161,8 @@ export default function FestivalScreen() {
                 {festival.restaurant} 에 대해서 알려드립니다.
               </p>
               <a
+                target="_blank"
+                rel="noopener noreferrer"
                 href={`https://map.kakao.com/link/map/${festival.location},${festival.lat},${festival.lng}`}
                 class="mt-8 inline-flex items-center rounded border border-indigo-600 bg-indigo-600 px-8 py-3 text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500"
               >
