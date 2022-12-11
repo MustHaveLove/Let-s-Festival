@@ -75,6 +75,13 @@ export default function Layout({ title, children }) {
               </Link>
 
               <Link
+                href="/crypto/jwt"
+                class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-orange-400 mx-4"
+              >
+                JWT
+              </Link>
+
+              <Link
                 href="/contact"
                 class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-orange-400 mx-4"
               >
@@ -86,13 +93,6 @@ export default function Layout({ title, children }) {
                 class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-orange-400 mx-4"
               >
                 개발자
-              </Link>
-
-              <Link
-                href="/crypto/jwt"
-                class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-orange-400 mx-4"
-              >
-                Jwt
               </Link>
             </nav>
 
